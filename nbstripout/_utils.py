@@ -12,7 +12,8 @@ def pop_recursive(d, key, default=None):
     >>> d
     {'a': {'b': 1}}
     """
-    nested = key.split('.')
+    # TODO ugh. not sure what's the good way to resolve it.
+    nested = [key]
     current = d
     for k in nested[:-1]:
         if hasattr(current, 'get'):
